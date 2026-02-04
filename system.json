@@ -52,6 +52,15 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "vigor",
+  "packs": [
+    {
+      "name": "example-spells",
+      "label": "Example Spells",
+      "path": "packs/example-spells",
+      "type": "Item",
+      "system": "eryndor"
+    }
+  ],
   "url": "https://github.com/SamuelSchmal/Eryndor-VTT-Module",
   "manifest": "https://github.com/SamuelSchmal/Eryndor-VTT-Module/releases/latest/download/system.json",
   "download": "https://github.com/SamuelSchmal/Eryndor-VTT-Module/archive/refs/heads/main.zip"
