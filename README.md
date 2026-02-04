@@ -119,7 +119,9 @@ Contributions are welcome! Please:
 
 ## License
 
-This work is licensed under the Foundry Virtual Tabletop EULA.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+This game system is designed for use with Foundry Virtual Tabletop and follows the Foundry VTT licensing guidelines.
 
 ## Links
 
