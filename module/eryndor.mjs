@@ -7,6 +7,8 @@ import { EryndorItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { ERYNDOR } from "./helpers/config.mjs";
+import { registerSystemSettings, registerSystemKeybindings } from "./settings.mjs";
+import * as utils from "./utils.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -19,11 +21,15 @@ Hooks.once('init', async function() {
   game.eryndor = {
     EryndorActor,
     EryndorItem,
-    rollItemMacro
+    rollItemMacro,
+    utils
   };
 
   // Add custom constants for configuration.
   CONFIG.ERYNDOR = ERYNDOR;
+
+  // Log initialization
+  console.log(`Initializing Eryndor Game System\n${ERYNDOR.ASCII}`);
 
   /**
    * Set an initiative formula for the system
@@ -37,6 +43,12 @@ Hooks.once('init', async function() {
   // Define custom Document classes
   CONFIG.Actor.documentClass = EryndorActor;
   CONFIG.Item.documentClass = EryndorItem;
+
+  // Register system settings
+  registerSystemSettings();
+  
+  // Register system keybindings
+  registerSystemKeybindings();
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);

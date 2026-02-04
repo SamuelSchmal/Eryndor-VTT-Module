@@ -124,12 +124,14 @@
       "damage": "1d6",
       "damageType": "physical",
       "range": "melee",
-      "formula": "1d20 + @str.mod"
+      "formula": "1d20 + @str.mod",
+      "equipped": false
     },
     "armor": {
       "templates": ["base"],
       "armorValue": 0,
-      "type": "light"
+      "type": "light",
+      "equipped": false
     },
     "equipment": {
       "templates": ["base"],
