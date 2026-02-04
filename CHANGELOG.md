@@ -2,6 +2,12 @@
 
 All notable changes to the Eryndor VTT Module will be documented in this file.
 
+## [1.0.1] - 2026-02-04
+
+### Fixed
+- Removed non-existent compendium pack reference from system.json that was causing "No system manifest found" error
+- The example-spells compendium pack will be added in a future release
+
 ## [1.0.0] - 2026-02-04
 
 ### Added
