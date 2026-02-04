@@ -2,7 +2,7 @@
   "id": "eryndor",
   "title": "Eryndor Game System",
   "description": "A custom game system for Foundry VTT based on the Eryndor rulebook.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": {
     "minimum": "13",
     "verified": "13.350",
@@ -52,15 +52,6 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "vigor",
-  "packs": [
-    {
-      "name": "example-spells",
-      "label": "Example Spells",
-      "path": "packs/example-spells",
-      "type": "Item",
-      "system": "eryndor"
-    }
-  ],
   "url": "https://github.com/SamuelSchmal/Eryndor-VTT-Module",
   "manifest": "https://github.com/SamuelSchmal/Eryndor-VTT-Module/releases/latest/download/system.json",
   "download": "https://github.com/SamuelSchmal/Eryndor-VTT-Module/archive/refs/heads/main.zip"
