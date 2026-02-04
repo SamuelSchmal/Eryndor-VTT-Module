@@ -13,17 +13,58 @@ Eryndor is a medieval fantasy world where magic was recently discovered through 
 
 ## Features
 
-This Foundry VTT module implements:
+### Core System (v1.1.0)
 
+#### Character & Actor System
 - ✅ Character and NPC actors with full Eryndor attributes
 - ✅ Six core attributes (Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma)
+- ✅ Automatic ability modifier calculation
+- ✅ Automatic proficiency bonus calculation based on level
 - ✅ Health and Vigor resource tracking
 - ✅ 15 Magic Masteries (5 Domains + 10 Forms)
-- ✅ Chronosilver weapon system
-- ✅ Item types: Weapons, Armor, Equipment, Spells, Skills, Talents
+- ✅ Chronosilver weapon system with 5 weapon types
+- ✅ Ability check rolls with chat integration
+- ✅ Mastery check rolls
+- ✅ Rest system with configurable recovery
+
+#### Item System
+- ✅ **Weapons**: Attack rolls, damage rolls, equipped state
+- ✅ **Armor**: AC contribution, equipped state
+- ✅ **Equipment**: Quantity and weight tracking
+- ✅ **Spells**: Vigor cost, spell casting with automatic deduction
+- ✅ **Skills**: Ability associations, proficiency tracking
+- ✅ **Talents**: Prerequisite system
+
+#### Settings & Configuration
+- ✅ **9 Configurable Settings**:
+  - Diagonal movement rules (Euclidean, Alternating, Exact)
+  - Custom initiative formula
+  - Mastery progression type (Linear, Exponential)
+  - Automatic AC calculation toggle
+  - Health recovery on rest (Full, Half, Custom)
+  - Vigor recovery on rest (Full, Half, Custom)
+  - Compact sheet layout preference
+  - Advanced magic features toggle
+  - Auto-collapse chat cards
+
+#### Enhanced Features
+- ✅ **25+ Utility Functions**: Formatting, calculations, roll helpers
+- ✅ **Registry System**: Spell/item tracking, DC calculations
+- ✅ **Keybindings**:
+  - `Shift+M`: Roll mastery check for selected token
+  - `Shift+I`: Roll initiative for selected tokens
+- ✅ **Extended Game Constants**:
+  - 12 damage types
+  - 15 status conditions
+  - 18 skills with ability associations
+  - 5 character origins
+
+#### UI & Localization
+- ✅ Custom character and item sheets with tabbed interface
 - ✅ Bilingual support (English and Portuguese)
-- ✅ Custom character and item sheets
-- ✅ Active effects system
+- ✅ Active effects system integration
+- ✅ Rich text editor support for biographies and descriptions
+- ✅ Custom Eryndor-themed styling
 
 ## Installation
 
