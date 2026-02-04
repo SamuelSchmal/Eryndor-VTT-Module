@@ -1,47 +1,76 @@
-<ol class="items-list">
-  <li class="item flexrow item-header">
-    <div class="item-image"></div>
-    <div class="item-name">Name</div>
-    <div class="item-controls">
+<div class="magic-tabs">
+  <div class="items-section">
+    <h4 class="items-section-header">
+      <i class="fas fa-wand-magic-sparkles"></i> Spells & Magic
       <a class="item-control item-create" title="Create spell" data-type="spell">
-        <i class="fas fa-plus"></i> Add Spell
+        <i class="fas fa-plus"></i>
       </a>
-    </div>
-  </li>
+    </h4>
+    <ol class="items-list">
+      {{#each spells as |item id|}}
+        <li class="item flexrow" data-item-id="{{item._id}}">
+          <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+          <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
+          <div class="item-formula">Circle {{item.system.spellLevel}}</div>
+          <div class="item-controls">
+            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+          </div>
+        </li>
+      {{/each}}
+      {{#if (eq spells.length 0)}}
+        <li class="item-empty"><em>No spells learned</em></li>
+      {{/if}}
+    </ol>
+  </div>
 
-  {{#each spells as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
-      <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-      <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
-      <div class="item-formula">Circle {{item.system.spellLevel}}</div>
-      <div class="item-controls">
-        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-      </div>
-    </li>
-  {{/each}}
+  <div class="items-section">
+    <h4 class="items-section-header">
+      <i class="fas fa-graduation-cap"></i> Skills
+      <a class="item-control item-create" title="Create skill" data-type="skill">
+        <i class="fas fa-plus"></i>
+      </a>
+    </h4>
+    <ol class="items-list">
+      {{#each skills as |item id|}}
+        <li class="item flexrow" data-item-id="{{item._id}}">
+          <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+          <h4 class="item-name">{{item.name}}</h4>
+          <div class="item-formula">{{item.system.ability}}</div>
+          <div class="item-controls">
+            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+          </div>
+        </li>
+      {{/each}}
+      {{#if (eq skills.length 0)}}
+        <li class="item-empty"><em>No skills known</em></li>
+      {{/if}}
+    </ol>
+  </div>
 
-  {{#each skills as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
-      <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-      <h4 class="item-name">{{item.name}}</h4>
-      <div class="item-formula">{{item.system.ability}}</div>
-      <div class="item-controls">
-        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-      </div>
-    </li>
-  {{/each}}
-
-  {{#each talents as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
-      <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-      <h4 class="item-name">{{item.name}}</h4>
-      <div class="item-formula"></div>
-      <div class="item-controls">
-        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-      </div>
-    </li>
-  {{/each}}
-</ol>
+  <div class="items-section">
+    <h4 class="items-section-header">
+      <i class="fas fa-star"></i> Talents
+      <a class="item-control item-create" title="Create talent" data-type="talent">
+        <i class="fas fa-plus"></i>
+      </a>
+    </h4>
+    <ol class="items-list">
+      {{#each talents as |item id|}}
+        <li class="item flexrow" data-item-id="{{item._id}}">
+          <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+          <h4 class="item-name">{{item.name}}</h4>
+          <div class="item-formula"></div>
+          <div class="item-controls">
+            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+          </div>
+        </li>
+      {{/each}}
+      {{#if (eq talents.length 0)}}
+        <li class="item-empty"><em>No talents acquired</em></li>
+      {{/if}}
+    </ol>
+  </div>
+</div>

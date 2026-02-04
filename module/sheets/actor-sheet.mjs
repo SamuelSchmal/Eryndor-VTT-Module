@@ -11,8 +11,8 @@ export class EryndorActorSheet extends ActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["eryndor", "sheet", "actor"],
       template: "systems/eryndor/templates/actor/actor-sheet.hbs",
-      width: 600,
-      height: 600,
+      width: 800,
+      height: 750,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "abilities" }]
     });
   }

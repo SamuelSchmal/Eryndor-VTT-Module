@@ -1,20 +1,23 @@
-<header class="flexrow">
-    <a class="effect-control" data-action="create" data-effect-type="temporary">
-        <i class="fas fa-plus"></i> Add Temporary Effect
-    </a>
-    <a class="effect-control" data-action="create" data-effect-type="passive">
-        <i class="fas fa-plus"></i> Add Passive Effect
-    </a>
+<header class="flexrow effect-controls-header">
+    <h3>Active Effects</h3>
+    <div class="effect-control-buttons">
+      <a class="effect-control" data-action="create" data-effect-type="temporary" title="Add Temporary Effect">
+        <i class="fas fa-plus"></i> Temporary
+      </a>
+      <a class="effect-control" data-action="create" data-effect-type="passive" title="Add Passive Effect">
+        <i class="fas fa-plus"></i> Passive
+      </a>
+    </div>
 </header>
 
 <div class="effects-list">
   {{#each effects.temporary.effects as |effect id|}}
-    <div class="effect flexrow" data-effect-id="{{effect.id}}">
+    <div class="effect flexrow" data-effect-id="{{effect.id}}" title="Temporary effect">
       <img src="{{effect.icon}}" title="{{effect.label}}" width="24" height="24"/>
       <h4 class="effect-name">{{effect.label}}</h4>
       <div class="effect-controls">
-        <a class="effect-control" data-action="edit"><i class="fas fa-edit"></i></a>
-        <a class="effect-control" data-action="delete"><i class="fas fa-trash"></i></a>
+        <a class="effect-control" data-action="edit" title="Edit Effect"><i class="fas fa-edit"></i></a>
+        <a class="effect-control" data-action="delete" title="Delete Effect"><i class="fas fa-trash"></i></a>
         <a class="effect-control" data-action="toggle" title="{{#if effect.disabled}}Enable{{else}}Disable{{/if}}">
           <i class="fas {{#if effect.disabled}}fa-check{{else}}fa-times{{/if}}"></i>
         </a>
@@ -23,12 +26,12 @@
   {{/each}}
   
   {{#each effects.passive.effects as |effect id|}}
-    <div class="effect flexrow" data-effect-id="{{effect.id}}">
+    <div class="effect flexrow" data-effect-id="{{effect.id}}" title="Passive effect">
       <img src="{{effect.icon}}" title="{{effect.label}}" width="24" height="24"/>
       <h4 class="effect-name">{{effect.label}}</h4>
       <div class="effect-controls">
-        <a class="effect-control" data-action="edit"><i class="fas fa-edit"></i></a>
-        <a class="effect-control" data-action="delete"><i class="fas fa-trash"></i></a>
+        <a class="effect-control" data-action="edit" title="Edit Effect"><i class="fas fa-edit"></i></a>
+        <a class="effect-control" data-action="delete" title="Delete Effect"><i class="fas fa-trash"></i></a>
         <a class="effect-control" data-action="toggle" title="{{#if effect.disabled}}Enable{{else}}Disable{{/if}}">
           <i class="fas {{#if effect.disabled}}fa-check{{else}}fa-times{{/if}}"></i>
         </a>
@@ -37,16 +40,26 @@
   {{/each}}
   
   {{#each effects.inactive.effects as |effect id|}}
-    <div class="effect flexrow inactive" data-effect-id="{{effect.id}}">
+    <div class="effect flexrow inactive" data-effect-id="{{effect.id}}" title="Inactive effect">
       <img src="{{effect.icon}}" title="{{effect.label}}" width="24" height="24"/>
       <h4 class="effect-name">{{effect.label}}</h4>
       <div class="effect-controls">
-        <a class="effect-control" data-action="edit"><i class="fas fa-edit"></i></a>
-        <a class="effect-control" data-action="delete"><i class="fas fa-trash"></i></a>
+        <a class="effect-control" data-action="edit" title="Edit Effect"><i class="fas fa-edit"></i></a>
+        <a class="effect-control" data-action="delete" title="Delete Effect"><i class="fas fa-trash"></i></a>
         <a class="effect-control" data-action="toggle" title="{{#if effect.disabled}}Enable{{else}}Disable{{/if}}">
           <i class="fas {{#if effect.disabled}}fa-check{{else}}fa-times{{/if}}"></i>
         </a>
       </div>
     </div>
   {{/each}}
+  
+  {{#if (eq effects.temporary.effects.length 0)}}
+    {{#if (eq effects.passive.effects.length 0)}}
+      {{#if (eq effects.inactive.effects.length 0)}}
+        <div class="empty-state">
+          <p>No effects active. Add one to get started!</p>
+        </div>
+      {{/if}}
+    {{/if}}
+  {{/if}}
 </div>

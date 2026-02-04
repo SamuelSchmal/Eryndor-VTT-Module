@@ -40,6 +40,9 @@
     },
     "character": {
       "templates": ["base", "abilities"],
+      "age": "",
+      "origin": "",
+      "appearance": "",
       "attributes": {
         "level": {
           "value": 1

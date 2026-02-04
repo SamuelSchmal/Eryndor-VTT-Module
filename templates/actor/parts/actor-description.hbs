@@ -1,0 +1,60 @@
+<div class="description-container">
+  {{!-- Character Personal Details --}}
+  <section class="character-details">
+    <h3>Character Details</h3>
+    <div class="details-grid">
+      <div class="detail-item">
+        <label for="system.age">Age</label>
+        <input type="text" name="system.age" value="{{system.age}}" placeholder="e.g., 25 years old"/>
+      </div>
+      <div class="detail-item">
+        <label for="system.origin">Origin</label>
+        <input type="text" name="system.origin" value="{{system.origin}}" placeholder="e.g., Kingdom of Aelmar"/>
+      </div>
+      <div class="detail-item full-width">
+        <label for="system.appearance">Appearance</label>
+        <input type="text" name="system.appearance" value="{{system.appearance}}" placeholder="Physical description, distinctive features"/>
+      </div>
+    </div>
+  </section>
+
+  {{!-- Chronosilver Weapon --}}
+  <section class="chronosilver-section">
+    <h3>Chronosilver Weapon</h3>
+    <div class="chronosilver-form">
+      <div class="detail-item">
+        <label for="system.chronosilverWeapon.type">Type</label>
+        <select name="system.chronosilverWeapon.type">
+          <option value="wand" {{#if (eq system.chronosilverWeapon.type "wand")}}selected{{/if}}>Wand</option>
+          <option value="staff" {{#if (eq system.chronosilverWeapon.type "staff")}}selected{{/if}}>Staff</option>
+          <option value="blade" {{#if (eq system.chronosilverWeapon.type "blade")}}selected{{/if}}>Blade</option>
+          <option value="bow" {{#if (eq system.chronosilverWeapon.type "bow")}}selected{{/if}}>Bow</option>
+          <option value="focus" {{#if (eq system.chronosilverWeapon.type "focus")}}selected{{/if}}>Focus</option>
+        </select>
+      </div>
+      <div class="detail-item">
+        <label for="system.chronosilverWeapon.attribute">Linked Attribute</label>
+        <select name="system.chronosilverWeapon.attribute">
+          <option value="str" {{#if (eq system.chronosilverWeapon.attribute "str")}}selected{{/if}}>Strength (STR)</option>
+          <option value="dex" {{#if (eq system.chronosilverWeapon.attribute "dex")}}selected{{/if}}>Dexterity (DEX)</option>
+          <option value="con" {{#if (eq system.chronosilverWeapon.attribute "con")}}selected{{/if}}>Constitution (CON)</option>
+          <option value="int" {{#if (eq system.chronosilverWeapon.attribute "int")}}selected{{/if}}>Intelligence (INT)</option>
+          <option value="wis" {{#if (eq system.chronosilverWeapon.attribute "wis")}}selected{{/if}}>Wisdom (WIS)</option>
+          <option value="cha" {{#if (eq system.chronosilverWeapon.attribute "cha")}}selected{{/if}}>Charisma (CHA)</option>
+        </select>
+      </div>
+      <div class="detail-item">
+        <label for="system.chronosilverWeapon.powerDie">Power Die</label>
+        <input type="text" name="system.chronosilverWeapon.powerDie" value="{{system.chronosilverWeapon.powerDie}}" placeholder="e.g., 1d6, 1d8, 1d10"/>
+      </div>
+    </div>
+  </section>
+
+  {{!-- Character History --}}
+  <section class="history-section">
+    <h3>Character History</h3>
+    <div class="history-editor">
+      {{editor system.biography target="system.biography" button=true owner=owner editable=editable}}
+    </div>
+  </section>
+</div>

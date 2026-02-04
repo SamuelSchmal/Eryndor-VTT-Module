@@ -1,47 +1,76 @@
-<ol class="items-list">
-  <li class="item flexrow item-header">
-    <div class="item-image"></div>
-    <div class="item-name">Name</div>
-    <div class="item-controls">
-      <a class="item-control item-create" title="Create item" data-type="equipment">
-        <i class="fas fa-plus"></i> Add Equipment
+<div class="items-tabs">
+  <div class="items-section">
+    <h4 class="items-section-header">
+      <i class="fas fa-sword"></i> Weapons
+      <a class="item-control item-create" title="Create weapon" data-type="weapon">
+        <i class="fas fa-plus"></i>
       </a>
-    </div>
-  </li>
+    </h4>
+    <ol class="items-list">
+      {{#each weapons as |item id|}}
+        <li class="item flexrow" data-item-id="{{item._id}}">
+          <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+          <h4 class="item-name">{{item.name}}</h4>
+          <div class="item-formula">{{item.system.damage}}</div>
+          <div class="item-controls">
+            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+          </div>
+        </li>
+      {{/each}}
+      {{#if (eq weapons.length 0)}}
+        <li class="item-empty"><em>No weapons equipped</em></li>
+      {{/if}}
+    </ol>
+  </div>
 
-  {{#each weapons as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
-      <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-      <h4 class="item-name">{{item.name}}</h4>
-      <div class="item-formula">{{item.system.damage}}</div>
-      <div class="item-controls">
-        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-      </div>
-    </li>
-  {{/each}}
+  <div class="items-section">
+    <h4 class="items-section-header">
+      <i class="fas fa-shield-alt"></i> Armor
+      <a class="item-control item-create" title="Create armor" data-type="armor">
+        <i class="fas fa-plus"></i>
+      </a>
+    </h4>
+    <ol class="items-list">
+      {{#each armor as |item id|}}
+        <li class="item flexrow" data-item-id="{{item._id}}">
+          <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+          <h4 class="item-name">{{item.name}}</h4>
+          <div class="item-formula">AC {{item.system.armorValue}}</div>
+          <div class="item-controls">
+            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+          </div>
+        </li>
+      {{/each}}
+      {{#if (eq armor.length 0)}}
+        <li class="item-empty"><em>No armor equipped</em></li>
+      {{/if}}
+    </ol>
+  </div>
 
-  {{#each armor as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
-      <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-      <h4 class="item-name">{{item.name}}</h4>
-      <div class="item-formula">AC {{item.system.armorValue}}</div>
-      <div class="item-controls">
-        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-      </div>
-    </li>
-  {{/each}}
-
-  {{#each gear as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
-      <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-      <h4 class="item-name">{{item.name}}</h4>
-      <div class="item-formula">{{item.system.quantity}}</div>
-      <div class="item-controls">
-        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-      </div>
-    </li>
-  {{/each}}
-</ol>
+  <div class="items-section">
+    <h4 class="items-section-header">
+      <i class="fas fa-backpack"></i> Equipment & Gear
+      <a class="item-control item-create" title="Create equipment" data-type="equipment">
+        <i class="fas fa-plus"></i>
+      </a>
+    </h4>
+    <ol class="items-list">
+      {{#each gear as |item id|}}
+        <li class="item flexrow" data-item-id="{{item._id}}">
+          <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+          <h4 class="item-name">{{item.name}}</h4>
+          <div class="item-formula">Qty: {{item.system.quantity}}</div>
+          <div class="item-controls">
+            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+          </div>
+        </li>
+      {{/each}}
+      {{#if (eq gear.length 0)}}
+        <li class="item-empty"><em>No equipment in inventory</em></li>
+      {{/if}}
+    </ol>
+  </div>
+</div>

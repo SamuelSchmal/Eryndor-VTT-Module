@@ -8,7 +8,7 @@
       {{!-- The grid classes are defined in eryndor.css --}}
       <div class="resources grid grid-2col">
         <div class="resource flex-group-center">
-          <label for="system.health.value" class="resource-label">Health</label>
+          <span class="resource-label">Health</span>
           <div class="resource-content flexrow flex-group-center">
             <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>
             <span> / </span>
@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class="resource flex-group-center">
-          <label for="system.vigor.value" class="resource-label">Vigor</label>
+          <span class="resource-label">Vigor</span>
           <div class="resource-content flexrow flex-group-center">
             <input type="text" name="system.vigor.value" value="{{system.vigor.value}}" data-dtype="Number"/>
             <span> / </span>
@@ -30,6 +30,7 @@
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     <a class="item" data-tab="abilities">Abilities</a>
+    <a class="item" data-tab="masteries">Masteries</a>
     <a class="item" data-tab="items">Items</a>
     <a class="item" data-tab="magic">Magic</a>
     <a class="item" data-tab="description">Description</a>
@@ -41,7 +42,7 @@
 
     {{!-- Abilities Tab --}}
     <div class="tab abilities" data-group="primary" data-tab="abilities">
-      <div class="flexrow">
+      <div class="flexrow character-info">
         <div class="flexcol">
           <label>Level</label>
           <input type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number"/>
@@ -53,6 +54,11 @@
       </div>
       
       {{> "systems/eryndor/templates/actor/parts/actor-abilities.hbs"}}
+    </div>
+
+    {{!-- Masteries Tab --}}
+    <div class="tab masteries" data-group="primary" data-tab="masteries">
+      {{> "systems/eryndor/templates/actor/parts/actor-masteries.hbs"}}
     </div>
 
     {{!-- Items Tab --}}
@@ -67,7 +73,7 @@
 
     {{!-- Biography Tab --}}
     <div class="tab biography" data-group="primary" data-tab="description">
-      {{editor system.biography target="system.biography" button=true owner=owner editable=editable}}
+      {{> "systems/eryndor/templates/actor/parts/actor-description.hbs"}}
     </div>
 
     {{!-- Effects Tab --}}
