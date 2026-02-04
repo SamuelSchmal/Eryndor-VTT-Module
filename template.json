@@ -1,0 +1,156 @@
+{
+  "Actor": {
+    "types": ["character", "npc"],
+    "templates": {
+      "base": {
+        "health": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        },
+        "vigor": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        },
+        "biography": ""
+      },
+      "abilities": {
+        "abilities": {
+          "str": {
+            "value": 10
+          },
+          "dex": {
+            "value": 10
+          },
+          "con": {
+            "value": 10
+          },
+          "int": {
+            "value": 10
+          },
+          "wis": {
+            "value": 10
+          },
+          "cha": {
+            "value": 10
+          }
+        }
+      }
+    },
+    "character": {
+      "templates": ["base", "abilities"],
+      "attributes": {
+        "level": {
+          "value": 1
+        },
+        "experience": {
+          "value": 0
+        },
+        "proficiency": {
+          "value": 2
+        },
+        "ca": {
+          "value": 10
+        }
+      },
+      "masteries": {
+        "creation": {
+          "value": 0
+        },
+        "destruction": {
+          "value": 0
+        },
+        "perception": {
+          "value": 0
+        },
+        "transformation": {
+          "value": 0
+        },
+        "control": {
+          "value": 0
+        },
+        "animal": {
+          "value": 0
+        },
+        "aquatic": {
+          "value": 0
+        },
+        "auric": {
+          "value": 0
+        },
+        "corporal": {
+          "value": 0
+        },
+        "floral": {
+          "value": 0
+        },
+        "igneous": {
+          "value": 0
+        },
+        "illusory": {
+          "value": 0
+        },
+        "mental": {
+          "value": 0
+        },
+        "terrestrial": {
+          "value": 0
+        },
+        "chronoetheric": {
+          "value": 0
+        }
+      },
+      "chronosilverWeapon": {
+        "type": "wand",
+        "attribute": "int",
+        "powerDie": "1d6"
+      }
+    },
+    "npc": {
+      "templates": ["base", "abilities"],
+      "cr": 0
+    }
+  },
+  "Item": {
+    "types": ["weapon", "armor", "equipment", "spell", "skill", "talent"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "weapon": {
+      "templates": ["base"],
+      "damage": "1d6",
+      "damageType": "physical",
+      "range": "melee",
+      "formula": "1d20 + @str.mod"
+    },
+    "armor": {
+      "templates": ["base"],
+      "armorValue": 0,
+      "type": "light"
+    },
+    "equipment": {
+      "templates": ["base"],
+      "quantity": 1,
+      "weight": 0
+    },
+    "spell": {
+      "templates": ["base"],
+      "spellLevel": 1,
+      "school": "evocation",
+      "manaCost": 1,
+      "formula": "1d6"
+    },
+    "skill": {
+      "templates": ["base"],
+      "ability": "str",
+      "proficient": false
+    },
+    "talent": {
+      "templates": ["base"],
+      "prerequisite": ""
+    }
+  }
+}

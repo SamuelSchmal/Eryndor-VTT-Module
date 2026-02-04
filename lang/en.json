@@ -1,0 +1,40 @@
+{
+  "ERYNDOR": {
+    "SheetLabels": {
+      "Actor": "Actor Sheet",
+      "Item": "Item Sheet"
+    },
+    "AbilityStr": "Strength",
+    "AbilityDex": "Dexterity",
+    "AbilityCon": "Constitution",
+    "AbilityInt": "Intelligence",
+    "AbilityWis": "Wisdom",
+    "AbilityCha": "Charisma",
+    "AbilityStrAbbr": "STR",
+    "AbilityDexAbbr": "DEX",
+    "AbilityConAbbr": "CON",
+    "AbilityIntAbbr": "INT",
+    "AbilityWisAbbr": "WIS",
+    "AbilityChaAbbr": "CHA",
+    "DomainCreation": "Creation",
+    "DomainDestruction": "Destruction",
+    "DomainPerception": "Perception",
+    "DomainTransformation": "Transformation",
+    "DomainControl": "Control",
+    "FormAnimal": "Animal",
+    "FormAquatic": "Aquatic",
+    "FormAuric": "Auric",
+    "FormCorporal": "Corporal",
+    "FormFloral": "Floral",
+    "FormIgneous": "Igneous",
+    "FormIllusory": "Illusory",
+    "FormMental": "Mental",
+    "FormTerrestrial": "Terrestrial",
+    "FormChronoetheric": "Chronoetheric",
+    "WeaponWand": "Wand",
+    "WeaponStaff": "Staff",
+    "WeaponSword": "Sword",
+    "WeaponOrb": "Orb",
+    "WeaponCrystal": "Crystal"
+  }
+}
