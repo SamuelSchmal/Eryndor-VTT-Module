@@ -255,7 +255,7 @@ export function isUUID(uuid) {
  * @returns {Promise<Document|null>} The document or null
  */
 export async function fromUuid(uuid) {
-  return fromUuidSync(uuid) ?? await fromUuid(uuid);
+  return fromUuidSync(uuid) ?? await globalThis.fromUuid(uuid);
 }
 
 /**
