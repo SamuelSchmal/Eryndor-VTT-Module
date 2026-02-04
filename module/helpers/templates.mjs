@@ -8,6 +8,8 @@ export const preloadHandlebarsTemplates = async function() {
 
     // Actor partials.
     "systems/eryndor/templates/actor/parts/actor-abilities.hbs",
+    "systems/eryndor/templates/actor/parts/actor-description.hbs",
+    "systems/eryndor/templates/actor/parts/actor-masteries.hbs",
     "systems/eryndor/templates/actor/parts/actor-items.hbs",
     "systems/eryndor/templates/actor/parts/actor-spells.hbs",
     "systems/eryndor/templates/actor/parts/actor-effects.hbs",

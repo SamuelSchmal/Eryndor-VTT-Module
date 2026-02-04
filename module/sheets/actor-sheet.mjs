@@ -90,7 +90,7 @@ export class EryndorActorSheet extends ActorSheet {
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
-      i.img = i.img || DEFAULT_TOKEN;
+      i.img = i.img || CONST.DEFAULT_TOKEN;
       // Append to gear.
       if (i.type === 'equipment') {
         gear.push(i);
