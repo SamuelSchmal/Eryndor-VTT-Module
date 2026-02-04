@@ -1,0 +1,79 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+      {{!-- The grid classes are defined in eryndor.css --}}
+      <div class="resources grid grid-2col">
+        <div class="resource flex-group-center">
+          <label for="system.health.value" class="resource-label">Health</label>
+          <div class="resource-content flexrow flex-group-center">
+            <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>
+            <span> / </span>
+            <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/>
+          </div>
+        </div>
+        <div class="resource flex-group-center">
+          <label for="system.vigor.value" class="resource-label">Vigor</label>
+          <div class="resource-content flexrow flex-group-center">
+            <input type="text" name="system.vigor.value" value="{{system.vigor.value}}" data-dtype="Number"/>
+            <span> / </span>
+            <input type="text" name="system.vigor.max" value="{{system.vigor.max}}" data-dtype="Number"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="abilities">Abilities</a>
+    <a class="item" data-tab="items">Items</a>
+    <a class="item" data-tab="magic">Magic</a>
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="effects">Effects</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Abilities Tab --}}
+    <div class="tab abilities" data-group="primary" data-tab="abilities">
+      <div class="flexrow">
+        <div class="flexcol">
+          <label>Level</label>
+          <input type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number"/>
+        </div>
+        <div class="flexcol">
+          <label>Experience</label>
+          <input type="text" name="system.attributes.experience.value" value="{{system.attributes.experience.value}}" data-dtype="Number"/>
+        </div>
+      </div>
+      
+      {{> "systems/eryndor/templates/actor/parts/actor-abilities.hbs"}}
+    </div>
+
+    {{!-- Items Tab --}}
+    <div class="tab items" data-group="primary" data-tab="items">
+      {{> "systems/eryndor/templates/actor/parts/actor-items.hbs"}}
+    </div>
+
+    {{!-- Magic Tab --}}
+    <div class="tab magic" data-group="primary" data-tab="magic">
+      {{> "systems/eryndor/templates/actor/parts/actor-spells.hbs"}}
+    </div>
+
+    {{!-- Biography Tab --}}
+    <div class="tab biography" data-group="primary" data-tab="description">
+      {{editor system.biography target="system.biography" button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Effects Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+      {{> "systems/eryndor/templates/actor/parts/actor-effects.hbs"}}
+    </div>
+
+  </section>
+</form>

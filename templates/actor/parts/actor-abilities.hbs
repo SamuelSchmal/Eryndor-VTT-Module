@@ -1,0 +1,9 @@
+<section class="abilities">
+  {{#each system.abilities as |ability key|}}
+  <div class="ability flexcol rollable" data-roll="1d20+@abilities.{{key}}.mod" data-label="{{key}}">
+    <h4>{{lookup ../config.abilities key}}</h4>
+    <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
+    <div class="ability-mod">{{numberFormat ability.mod decimals=0 sign=true}}</div>
+  </div>
+  {{/each}}
+</section>

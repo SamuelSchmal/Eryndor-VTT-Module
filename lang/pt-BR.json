@@ -1,0 +1,40 @@
+{
+  "ERYNDOR": {
+    "SheetLabels": {
+      "Actor": "Ficha de Personagem",
+      "Item": "Ficha de Item"
+    },
+    "AbilityStr": "Força",
+    "AbilityDex": "Destreza",
+    "AbilityCon": "Constituição",
+    "AbilityInt": "Inteligência",
+    "AbilityWis": "Sabedoria",
+    "AbilityCha": "Carisma",
+    "AbilityStrAbbr": "FOR",
+    "AbilityDexAbbr": "DES",
+    "AbilityConAbbr": "CON",
+    "AbilityIntAbbr": "INT",
+    "AbilityWisAbbr": "SAB",
+    "AbilityChaAbbr": "CAR",
+    "DomainCreation": "Criação",
+    "DomainDestruction": "Destruição",
+    "DomainPerception": "Percepção",
+    "DomainTransformation": "Transformação",
+    "DomainControl": "Controle",
+    "FormAnimal": "Animal",
+    "FormAquatic": "Aquática",
+    "FormAuric": "Áurea",
+    "FormCorporal": "Corporal",
+    "FormFloral": "Floral",
+    "FormIgneous": "Ígnea",
+    "FormIllusory": "Ilusória",
+    "FormMental": "Mental",
+    "FormTerrestrial": "Terrestre",
+    "FormChronoetheric": "Cronoetérea",
+    "WeaponWand": "Varinha",
+    "WeaponStaff": "Cajado",
+    "WeaponSword": "Espada",
+    "WeaponOrb": "Orbe",
+    "WeaponCrystal": "Cristal"
+  }
+}
