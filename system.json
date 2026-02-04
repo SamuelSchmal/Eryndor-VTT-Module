@@ -2,7 +2,7 @@
   "id": "eryndor",
   "title": "Eryndor Game System",
   "description": "A custom game system for Foundry VTT based on the Eryndor rulebook.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "compatibility": {
     "minimum": "13",
     "verified": "13.350",

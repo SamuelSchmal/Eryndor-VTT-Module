@@ -9,6 +9,7 @@ import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { ERYNDOR } from "./helpers/config.mjs";
 import { registerSystemSettings, registerSystemKeybindings } from "./settings.mjs";
 import * as utils from "./utils.mjs";
+import registry from "./registry.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -22,7 +23,8 @@ Hooks.once('init', async function() {
     EryndorActor,
     EryndorItem,
     rollItemMacro,
-    utils
+    utils,
+    registry
   };
 
   // Add custom constants for configuration.
